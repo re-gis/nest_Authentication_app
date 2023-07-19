@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import * as mongoose from 'mongoose';
 
-export const UserModel = new mongoose.Schema(
+const UserSchema = new mongoose.Schema(
   {
     email: {
       type: String,
@@ -22,3 +22,6 @@ export const UserModel = new mongoose.Schema(
     timestamps: true,
   },
 );
+
+
+export const UserModel = mongoose.model("UserModel", UserSchema)
